@@ -27,6 +27,10 @@ function Ipfssave({ paid }) {
         const address = await signer.getAddress();
         setAccount(address);
         let contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS_IPFSSAVE;
+        console
+          .log
+          // import.meta.env.VITE_CONTRACT_ADDRESS_IPFSSAVE + " ---------"
+          ();
         const contract = new ethers.Contract(
           contractAddress,
           Upload.abi,

@@ -81,9 +81,9 @@ const Nav = () => {
           <li className="md:ml-8 text-green md:my-0 my-7" id="nav">
             <Link to="/chatvideo">VIDEOCHAT</Link>
           </li>
-          <li className="md:ml-8 text-green md:my-0 my-7" id="nav">
+          {/* <li className="md:ml-8 text-green md:my-0 my-7" id="nav">
             <Link to="/ipfsphotoshare">MEMORIES</Link>
-          </li>
+          </li> */}
 
           {/* {Links.map((link) => (
             <li
