@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./fileUpload.css";
+import "./fileUpload.css"
 import axios from "axios";
 
 const FileUpload = ({ contract, account }) => {
@@ -8,7 +8,7 @@ const FileUpload = ({ contract, account }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     if (!file) {
       alert("Please select an image to upload.");
       return;
@@ -30,7 +30,6 @@ const FileUpload = ({ contract, account }) => {
       });
 
       const imgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
-      console.log(resFile.data.IpfsHash + "---------");
       contract.add(account, imgHash);
       console.log(imgHash);
 
@@ -78,3 +77,4 @@ const FileUpload = ({ contract, account }) => {
 };
 
 export default FileUpload;
+

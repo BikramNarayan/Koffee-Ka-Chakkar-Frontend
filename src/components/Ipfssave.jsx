@@ -1,10 +1,10 @@
-import "./styles/ipfssave.css";
-import Upload from "./contracts/coffeekachakkar.json";
+import "../styles/ipfssave.css";
+import Upload from "../contracts/coffeekachakkar.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import FileUpload from "./components-p/FileUpload";
-import Display from "./components-p/Display";
-import Modal from "./components-p/Modal";
+import FileUpload from "../components-p/FileUpload";
+import Display from "../components-p/Display";
+import Modal from "../components-p/Modal";
 
 function Ipfssave({ paid }) {
   const [account, setAccount] = useState("");
@@ -27,10 +27,6 @@ function Ipfssave({ paid }) {
         const address = await signer.getAddress();
         setAccount(address);
         let contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS_IPFSSAVE;
-        console
-          .log
-          // import.meta.env.VITE_CONTRACT_ADDRESS_IPFSSAVE + " ---------"
-          ();
         const contract = new ethers.Contract(
           contractAddress,
           Upload.abi,
